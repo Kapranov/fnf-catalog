@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   match 'dashboard', to: 'dashboards#index', via: [:get]
+  match 'landing', to: 'landing#index', via: [:get]
   match 'store', to: 'store#index', via: [:get]
   match 'shop', to: 'store#index', via: [:get]
 
