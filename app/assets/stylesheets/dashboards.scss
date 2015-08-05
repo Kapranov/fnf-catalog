@@ -7,6 +7,12 @@
 
 .translation_missing { color: red; background: black; }
 
+.center-block {
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pace .pace-progress {
   background: #1AB394 none repeat scroll 0% 0%;
   position: fixed;

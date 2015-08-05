@@ -201,13 +201,13 @@ uk:
   menu:
     panels:
       lang: "Локалізація"
-      en: "Англійська"
-      ru: "Російська"
+      en: "English"
+      ru: "Русский"
       uk: "Українська"
     languages:
       lang: "Мова"
-      en: "Англійська"
-      ru: "Російська"
+      en: "English"
+      ru: "Русский"
       uk: "Українська"
   date:
     abbr_day_names:

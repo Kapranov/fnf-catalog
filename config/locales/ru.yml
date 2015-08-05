@@ -204,14 +204,14 @@ ru:
   menu:
     panels:
       lang: "Локализация"
-      en: "Английский"
+      en: "English"
       ru: "Русский"
-      uk: "Украйнский"
+      uk: "Українська"
     languages:
       lang: "Язык"
-      en: "Английский"
+      en: "English"
       ru: "Русский"
-      uk: "Украйнский"
+      uk: "Українська"
   date:
     abbr_day_names:
     - Вс
