@@ -2,6 +2,8 @@
 //= require font-awesome
 //= require landing_style.css
 
+.translation_missing { color: red; background: black; }
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('/assets/glyphicons-halflings-regular.eot');
