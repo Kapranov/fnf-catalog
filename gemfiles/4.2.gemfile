@@ -33,6 +33,7 @@ gem 'foreigner'
 gem 'ffaker'
 gem 'ruby-units'
 gem 'gettext_i18n_rails'
+gem 'public_activity'
 # gem 'enum_to_sym'
 # gem 'anjlab-widgets'
 

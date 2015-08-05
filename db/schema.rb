@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 17) do
+ActiveRecord::Schema.define(version: 19) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -187,6 +187,8 @@ ActiveRecord::Schema.define(version: 17) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "name"
+    t.text     "note"
+    t.text     "about"
   end
 
   add_index "user_translations", ["locale"], name: "index_user_translations_on_locale"
@@ -207,6 +209,8 @@ ActiveRecord::Schema.define(version: 17) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "avatar_id"
+    t.text     "note"
+    t.text     "about"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

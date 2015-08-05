@@ -20,7 +20,7 @@ nav.navbar-default.navbar-static-side[role="navigation"]
                 b.caret
           ul.dropdown-menu.animated.fadeInRight.m-t-xs
             li
-              a[href="profile.html"] = t('Profile')
+              a[href="/profile"] = t('Profile')
             li
               a[href="contacts.html"] = t('Contacts')
             li
@@ -32,6 +32,10 @@ nav.navbar-default.navbar-static-side[role="navigation"]
         a[href="#{url_for :controller => 'dashboards', :action => 'index'}"]
           i.fa.fa-th-large
           span.nav-label = t('Dashboard')
+      li
+        a[href="/profile"]
+          i.fa.fa-user
+          span.nav-label = t('Profile')
       li
         a[href="#{url_for :controller => 'companies', :action => 'index'}"]
           i.fa.fa-ioxhost

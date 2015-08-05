@@ -10,12 +10,14 @@ Rails.application.routes.draw do
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
   get 'dashboards/index'
   get 'store/index'
+  get 'profiles/index'
 
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code
   end
 
   match 'dashboard', to: 'dashboards#index', via: [:get]
+  match 'profile', to: 'profiles#index', via: [:get]
   match 'landing', to: 'landing#index', via: [:get]
   match 'store', to: 'store#index', via: [:get]
   match 'shop', to: 'store#index', via: [:get]

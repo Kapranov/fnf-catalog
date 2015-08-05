@@ -183,6 +183,7 @@ en:
   Show category: "Category Description"
   Show products: "Products Description"
   Show product: "Product Description"
+  Profile: "Profile User"
   menu:
     panels:
       lang: "Localization"
