@@ -60,4 +60,8 @@ class ApplicationController < ActionController::Base
     dashboards_index_path
   end
 
+  def after_update_path_for(resource)
+    dashboards_index_path
+  end
+
 end
