@@ -21,14 +21,14 @@
 //  }, 5000);
 // });
 
-$(document).ready(function() {
-  setTimeout(function() {
-    toastr.options = {
-      closeButton: true,
-      progressBar: true,
-      showMethod: 'slideDown',
-      timeOut: 4000
-    };
-    toastr.success('Go to <a href="mailbox.html" class="text-warning">Mailbox</a> to see who wrote to you. Check the date and today\'s tasks.');
-  }, 1300);
-});
+//$(document).ready(function() {
+//  setTimeout(function() {
+//    toastr.options = {
+//      closeButton: true,
+//      progressBar: true,
+//      showMethod: 'slideDown',
+//      timeOut: 4000
+//    };
+//    toastr.success('Go to <a href="mailbox.html" class="text-warning">Mailbox</a> to see who wrote to you. Check the date and today\'s tasks.');
+//  }, 1300);
+//});

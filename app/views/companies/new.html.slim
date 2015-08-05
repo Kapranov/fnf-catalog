@@ -6,6 +6,10 @@
         a[href="#{url_for :controller => 'companies', :action => 'index'}"] = t('Companies')
       li.active
         strong = t('Create Company')
-    br
+  .col-lg-4
+    .title-action
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Back')}</button>".html_safe, companies_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Show')}</button>".html_safe, @company
+  .col-lg-1
 
 == render 'form'

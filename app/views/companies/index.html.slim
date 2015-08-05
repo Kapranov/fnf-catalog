@@ -8,7 +8,7 @@
         strong = t('Listing Companies')
   .col-lg-3
     .title-action
-      = link_to "<button class='btn btn-sm btn-success dim btn-outline' type='button'>#{t('Create Company')}</button>".html_safe, new_company_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Create Company')}</button>".html_safe, new_company_path
   .col-lg-1
 
 .wrapper.wrapper-content.animated.fadeInRight.ecommerce
@@ -39,12 +39,12 @@
           table.footable.table.table-stripped.toggle-arrow-tiny[data-page-size="15"]
             thead
               tr
-                th = t('User')
                 th = t('logo')
+                th = t('Status')
                 th = t('Name')
+                th = t('User')
                 th = t('Description')
                 th = t('Attachments')
-                th = t('Status')
                 th
                 th
                 th
@@ -52,20 +52,20 @@
             tbody
               - @companies.each do |company|
                 tr
-                  td = company.user
                   td
                     - company.uploads.each do |upload|
                       = attachment_image_tag(upload, :avatar, :fill, 55, 25, class: "img-circle")
-                  td = company.name
-                  td = company.description.html_safe
-                  td
-                    - company.attachments.each do |attachment|
-                      = attachment_image_tag(attachment, :attach, :fill, 35, 35)
                   td.footable-visible
                     - if company.status
                       span.label.label-primary = t('active')
                     - else
                       span.label.label-danger = t('inactive')
+                  td = company.name
+                  td = company.user
+                  td = company.description.html_safe
+                  td
+                    - company.attachments.each do |attachment|
+                      = attachment_image_tag(attachment, :attach, :fill, 35, 35)
                   td = link_to '<i class="fa fa-eye size-14"></i>'.html_safe, company
                   td = link_to '<i class="fa fa-pencil size-14"></i>'.html_safe, edit_company_path(company)
                   td = link_to '<i class="fa fa-trash size-14"></i>'.html_safe, company, data: {:confirm => t('Are you sure')}, :method => :delete

@@ -197,6 +197,10 @@ ru:
   Update Quantity: "Обновить количество"
   delete the product: "Вы уверены, что хотите удалить продукт "
   from your cart: " из корзины? "
+  Show Companies: "Описание компании"
+  Show categories: "Описание категории"
+  Show products: "Описание товаров"
+  Show product: "Описание товара"
   menu:
     panels:
       lang: "Локализация"

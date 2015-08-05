@@ -1,9 +1,22 @@
-br
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-7
+    h2 = t('Catalog')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'products', :action => 'index'}"] = t('Products')
+      li.active
+        strong = t('Show products')
+  .col-lg-4
+    .title-action
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Back')}</button>".html_safe, products_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Edit')}</button>".html_safe, edit_product_path(@product)
+  .col-lg-1
+
 .row.wrapper.animated.fadeInRight
   .col-lg-8
     .ibox.float-e-margins
       .ibox-title
-        h5
+        h5 = t('Show product')
         .ibox-tools
           a.collapse-link
             i.fa.fa-chevron-up
@@ -122,7 +135,7 @@ br
                       = attachment.attach_size
                       '
                       | Bytes
-    .col-sm-6
+    /.col-sm-6
       .links.animated.rotateIn
         = link_to '<i class="fa fa-reply size-14"></i>'.html_safe, products_path
         '

@@ -193,6 +193,11 @@ uk:
   Update Quantity: "Оновити кількість"
   delete the product: "Ви впевнені, що хочете видалити продукт "
   from your cart: "з кошика"
+  Show Companies: "Опис компанії"
+  Show categories: "Опис категорій"
+  Show category: "Опис категорії"
+  Show products: "Опис товарів"
+  Show product: "Опис товара"
   menu:
     panels:
       lang: "Локалізація"

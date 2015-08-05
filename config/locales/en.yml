@@ -178,6 +178,11 @@ en:
   Update Quantity: "Update Quantity"
   delete the product: "Are you sure you wish to delete the product "
   from your cart: "from your cart? "
+  Show Companies: "Company Description"
+  Show categories: "Categories Description"
+  Show category: "Category Description"
+  Show products: "Products Description"
+  Show product: "Product Description"
   menu:
     panels:
       lang: "Localization"

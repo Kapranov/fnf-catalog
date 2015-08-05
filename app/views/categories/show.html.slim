@@ -1,10 +1,23 @@
-br
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-7
+    h2 = t('Catalog')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'categories', :action => 'index'}"] = t('Categories')
+      li.active
+        strong = t('Show categories')
+  .col-lg-4
+    .title-action
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Back')}</button>".html_safe, categories_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Edit')}</button>".html_safe, edit_category_path(@category)
+  .col-lg-1
+
 .row
   .wrapper.animated.fadeInRight
     .col-lg-8
       .ibox.float-e-margins
         .ibox-title
-          h5
+          h5 = t('Show category')
           .ibox-tools
             a.collapse-link
               i.fa.fa-chevron-up
@@ -46,8 +59,8 @@ br
                 strong = t('Description')
                 '
                 = @category.description.html_safe
-        br
-        .col-sm-6
+        /br
+        /.col-sm-6
           .links.animated.rotateIn
             = link_to '<i class="fa fa-reply size-14"></i>'.html_safe, categories_path
             '

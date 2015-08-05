@@ -1,4 +1,17 @@
-br
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-7
+    h2 = t('Company')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'companies', :action => 'index'}"] = t('Companies')
+      li.active
+        strong = t('Show Companies')
+  .col-lg-4
+    .title-action
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Back')}</button>".html_safe, companies_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Edit')}</button>".html_safe, edit_company_path(@company)
+  .col-lg-1
+
 .row.wrapper.animated.fadeInRight
   .col-lg-8
     .ibox.float-e-margins
@@ -82,7 +95,7 @@ br
                       '
                       | Bytes
 
-    .col-sm-6
+    /.col-sm-6
       .links.animated.rotateIn
         = link_to '<i class="fa fa-reply size-14"></i>'.html_safe, companies_path
         '
