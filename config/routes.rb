@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   match 'store', to: 'store#index', via: [:get]
   match 'shop', to: 'store#index', via: [:get]
 
+  as :user do
+    get 'users', :to => 'dashboards#index', :as => :user_root
+  end
+
   root to: "landing#index"
 
   devise_for :users
