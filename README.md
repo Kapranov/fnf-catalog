@@ -1,6 +1,6 @@
 README
 ------
 
-The July version for Zettheme Inc.
+Application catalog of products for Zettheme Inc.
 
-Oleg G.Kapranov 20 July 2015.
+Oleg G.Kapranov 5 August 2015.
