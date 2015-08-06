@@ -199,6 +199,8 @@ uk:
   Show products: "Опис товарів"
   Show product: "Опис товара"
   Profile: "Профіль"
+  Profiles: "Профілі"
+  Listing profiles: "Перелік профілів"
   menu:
     panels:
       lang: "Локалізація"

@@ -202,6 +202,8 @@ ru:
   Show products: "Описание товаров"
   Show product: "Описание товара"
   Profile: "Профиль"
+  Profiles: "Профили"
+  Listing profiles: "Переченб профелей"
   menu:
     panels:
       lang: "Локализация"

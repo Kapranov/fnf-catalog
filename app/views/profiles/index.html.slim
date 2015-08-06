@@ -1,2 +1,118 @@
-h1 Profiles#index
-p Find me in app/views/profiles/index.html.slim
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-8
+    h2 = t('Profile')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'dashboards', :action => 'index'}"] = t('Dashboards')
+      li.active
+        strong = t('Listing profiles')
+    div[style="height:5px"]
+
+.wrapper.wrapper-content
+  .row.animated.fadeInRight
+    .col-md-4
+      .ibox.float-e-margins
+        .ibox-title
+          h5 Profile Detail
+      .ibox-content.no-padding.border-left-right
+        img[alt="image" class="img-responsive" src="profile_big.jpg"]
+      .ibox-content.profile-content
+        h4
+          strong Monica Smith
+        p
+          i.fa.fa-map-marker
+          | Riviera State 32/106
+        h5 About me
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitat.
+        .row.m-t-lg
+          .col-md-4
+            span.bar 5,3,9,6,5,9,7,3,5,2
+            h5
+              strong 169
+              | Posts
+          .col-md-4
+            span.line 5,3,9,6,5,9,7,3,5,2
+            h5
+              strong 28
+              | Following
+          .col-md-4
+            span.bar 5,3,2,-1,-3,-2,2,3,5,2
+            h5
+              strong 240
+              | Followers
+        .user-button
+          .row
+            .col-md-6
+              button[type="button" class="btn btn-primary btn-sm btn-block"]
+                i.fa.fa-envelope
+                | Send Message
+            .col-md-6
+              button[type="button" class="btn btn-default btn-sm btn-block"]
+                i.fa.fa-coffee
+                | Buy a coffee
+    .col-md-8
+      .ibox.float-e-margins
+        .ibox-title
+          h5 Activites
+          .ibox-tools
+            a.collapse-link
+              i.fa.fa-chevron-up
+            a.close-link
+              i.fa.fa-times
+        .ibox-content
+          div
+            .feed-activity-list
+              .feed-element
+                a[href="#" class="pull-left"]
+                  img[alt="image" class="img-circle" src="a1.jpg"]
+                .media-body
+                  small.pull-right.text-navy 1m ago
+                  strong Sandra Momot
+                  | started following
+                  strong Monica Smith
+                  br
+                  small.text-muted Today 4:21 pm - 12.06.2014
+                  .actions
+                    a.btn.btn-xs.btn-white
+                      i.fa.fa-thumbs-up Like
+                    a.btn.btn-xs.btn-danger
+                      i.fa.fa-heart
+                      | Love
+              .feed-element
+                a[href="#" class="pull-left"]
+                  img[alt="image" class="img-circle" src="profile.jpg"]
+                .media-body
+                  small.pull-right 5m ago
+                  strong Monica Smith
+                  | posted a new blog.
+                  br
+                  small.text-muted Today 5:60 pm - 12.06.2014
+              .feed-element
+                a[href="#" class="pull-left"]
+                  img[alt="image" class="img-circle" src="a2.jpg"]
+                .media-body
+                  small.pull-right 2h ago
+                  strong Mark Johnson
+                  | posted message on
+                  strong Monica Smith
+                  | site.
+                  br
+                  small.text-muted Today 2:10 pm - 12.06.2014
+                  .well
+                    | Lorem Ipsum is simply dummy text of the printing
+                    | and typesetting industry. Lorem Ipsum has been
+                    | the industry's standard dummy text ever since the 1500s.
+                    | Over the years, sometimes by accident, sometimes on purpose
+                    | (injected humour and the like).
+                  .pull-right
+                    a.btn.btn-xs.btn-white
+                      i.fa.fa-thumbs-up
+                      | Like
+                    a.btn.btn-xs.btn-white
+                      i.fa.fa-heart
+                      | Love
+                    a.btn.btn-xs.btn-primary
+                      i.fa.fa-pencil
+                      | Message

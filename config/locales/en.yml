@@ -183,7 +183,9 @@ en:
   Show category: "Category Description"
   Show products: "Products Description"
   Show product: "Product Description"
-  Profile: "Profile User"
+  Profile: "Profile"
+  Profiles: "Profiles"
+  Listing profiles: "List of the profiles"
   menu:
     panels:
       lang: "Localization"
