@@ -6,8 +6,18 @@
 
 .translation_missing { color: red; background: black; }
 
+.center-block {
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .size-14 {
   font-size: 14pt;
+}
+
+.size-15 {
+  font-size: 15pt;
 }
 
 h1,

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'dashboards/index'
   get 'store/index'
   get 'profiles/index'
+  get 'calendar/index'
+  get 'activities/index'
 
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   match 'landing', to: 'landing#index', via: [:get]
   match 'store', to: 'store#index', via: [:get]
   match 'shop', to: 'store#index', via: [:get]
+  match 'calendar', to: 'calendar#index', via: [:get]
 
   as :user do
     get 'users', :to => 'dashboards#index', :as => :user_root

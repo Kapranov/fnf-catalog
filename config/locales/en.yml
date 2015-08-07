@@ -186,6 +186,13 @@ en:
   Profile: "Profile"
   Profiles: "Profiles"
   Listing profiles: "List of the profiles"
+  Calendar: "Calendar"
+  Blog: "Blog"
+  Task manager: "Task Manager"
+  Profile Detail: "Profile Detail"
+  Note: "Note"
+  About: "About me"
+  Enter current password: "Enter the current password"
   menu:
     panels:
       lang: "Localization"

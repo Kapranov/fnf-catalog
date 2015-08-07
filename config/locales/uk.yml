@@ -201,6 +201,13 @@ uk:
   Profile: "Профіль"
   Profiles: "Профілі"
   Listing profiles: "Перелік профілів"
+  Calendar: "Календар"
+  Task manager: "Планувальник завдань"
+  Blog: "Блог"
+  Profile Detail: "Профілі детально"
+  Note: "Примітка"
+  About: "Про мене"
+  Enter current password: "Ведіть поточний пароль"
   menu:
     panels:
       lang: "Локалізація"

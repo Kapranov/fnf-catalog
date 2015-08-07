@@ -2,8 +2,6 @@
   .col-lg-8
     h2 = t('Profile')
     ol.breadcrumb
-      li
-        a[href="#{url_for :controller => 'dashboards', :action => 'index'}"] = t('Dashboards')
       li.active
         strong = t('Listing profiles')
     div[style="height:5px"]
@@ -13,20 +11,49 @@
     .col-md-4
       .ibox.float-e-margins
         .ibox-title
-          h5 Profile Detail
-      .ibox-content.no-padding.border-left-right
-        img[alt="image" class="img-responsive" src="profile_big.jpg"]
-      .ibox-content.profile-content
-        h4
-          strong Monica Smith
-        p
-          i.fa.fa-map-marker
-          | Riviera State 32/106
-        h5 About me
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitat.
-        .row.m-t-lg
+          h5 = t('Profile Detail')
+          .ibox-tools
+            a.collapse-link
+              i.fa.fa-chevron-up
+            a.close-link
+              i.fa.fa-times
+        .ibox-content.profile-content
+          table
+            thead
+              tr
+                th
+                th
+                th
+            tbody
+            - @users.each do |user|
+              tr
+                td
+                  /= attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                  - if user.avatar_id.present?
+                    span
+                      = attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                  - else
+                    span
+                      = image_tag 'images.png', size: "30", class: "img-circle"
+                td
+                  div[style="width:10px"]
+                td
+                  /= link_to user.name, '#', id: "ProfileUserList", remote: true
+                  = link_to user.name, "hello", remote: true
+                  span#hello_target
+        /.ibox-content.no-padding.border-left-right
+          img[alt="image" class="img-responsive" src="profile_big.jpg"]
+        /.ibox-content.profile-content
+          h4
+            strong Monica Smith
+          p
+            i.fa.fa-map-marker
+            | Riviera State 32/106
+          h5 About me
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitat.
+        /.row.m-t-lg
           .col-md-4
             span.bar 5,3,9,6,5,9,7,3,5,2
             h5
@@ -42,7 +69,7 @@
             h5
               strong 240
               | Followers
-        .user-button
+        /.user-button
           .row
             .col-md-6
               button[type="button" class="btn btn-primary btn-sm btn-block"]
@@ -52,7 +79,32 @@
               button[type="button" class="btn btn-default btn-sm btn-block"]
                 i.fa.fa-coffee
                 | Buy a coffee
-    .col-md-8
+    .col-lg-8
+      .widget-head-color-box.navy-bg.p-lg.text-center
+        .m-b-md
+          h2.font-bold.no-margins
+            | Alex Smith
+          small Founder of Groupeq
+        img[src="images.png" class="img-circle circle-border m-b-md" alt="profile"]
+        div
+          span 100 Tweets
+          span 350 Following
+          span 610 Followers
+      .widget-text-box
+        - @activities.each do |activity|
+          = link_to activity.owner.name, activity.owner if activity.owner
+          = link_to activity.trackable.name, activity.trackable
+        h4.media-heading Alex Smith
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .text-right
+          a.btn.btn-xs.btn-white
+            i.fa.fa-thumbs-up
+            | Like
+          a.btn.btn-xs.btn-primary
+            i.fa.fa-heart
+            | Love
+
+    /.col-md-8
       .ibox.float-e-margins
         .ibox-title
           h5 Activites
@@ -116,3 +168,18 @@
                     a.btn.btn-xs.btn-primary
                       i.fa.fa-pencil
                       | Message
+javascript:
+  $(document).ready(function(){
+    $('#ProfileUserList').click(function(e){
+      e.preventDefault();
+      $.ajax({
+        type: 'GET',
+        url: "profiles/index",
+        success: function(response){
+          console.log(response)
+            $('#ProfileUserList').html(response);
+        }
+
+      })
+    });
+  });

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :products
   has_many :companies
   has_many :profiles
+  has_many :calendar
 
   attachment :avatar
 

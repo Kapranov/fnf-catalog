@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_locale
   helper_method :current_order, :current_view
+  respond_to :html, :js
 
   def set_locale
     if cookies[:FnfZettheme_locale] && I18n.available_locales.include?(cookies[:FnfZettheme_locale].to_sym)

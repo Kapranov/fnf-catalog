@@ -10,6 +10,10 @@
 //= require bootstrap_refile
 //= require cocoon
 //= require cocoon-limiter/cocoon_limiter.js
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/lang/ru
+//= require fullcalendar/lang/uk
 
 // $(document).ready(function() {
 //  setTimeout(function() {

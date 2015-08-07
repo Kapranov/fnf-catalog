@@ -203,7 +203,14 @@ ru:
   Show product: "Описание товара"
   Profile: "Профиль"
   Profiles: "Профили"
-  Listing profiles: "Переченб профелей"
+  Listing profiles: "Перечень профелей"
+  Calendar: "Календарь"
+  Blog: "Блог"
+  Task manager: "Планировщик задач"
+  Profile Detail: "Профили подробно"
+  Note: "Заметка"
+  About: "Обо мне"
+  Enter current password: "Ведите текущий пароль"
   menu:
     panels:
       lang: "Локализация"

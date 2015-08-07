@@ -5,7 +5,7 @@
         .navbar-header
           button[aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"]
             i.fa.fa-reorder
-          a.navbar-brand[href="#{url_for :controller => 'landing', :action => 'index'}"] FnF
+          a.navbar-brand[href="#{url_for :controller => 'landing', :action => 'index'}" style="height:52px"] FnF
         .navbar-collapse.collapse#navbar
           ul.nav.navbar-nav
             li.active
@@ -14,7 +14,7 @@
             li.dropdown
               a[aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"]
                 |
-                = t('menu.languages.lang')
+                i.fa.fa-language.size-15
                 '
                 span[class="caret"]
               ul[role="menu" class="dropdown-menu"]

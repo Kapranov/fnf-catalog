@@ -37,6 +37,16 @@ nav.navbar-default.navbar-static-side[role="navigation"]
           i.fa.fa-users
           span.nav-label = t('Profile')
       li
+        a[href="#{url_for :controller => 'calendar', :action => 'index'}"]
+          i.fa.fa-calendar-check-o
+          span.nav-label = t('Calendar')
+        /= link_to 'Calendar',
+      li
+        a[href="/profile"]
+          i.fa.fa-globe
+          span.nav-label = t('Blog')
+        /= link_to 'Calendar',
+      li
         a[href="#{url_for :controller => 'companies', :action => 'index'}"]
           i.fa.fa-ioxhost
           span.nav-label = t('Companies')
