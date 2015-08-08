@@ -211,6 +211,7 @@ ru:
   Note: "Заметка"
   About: "Обо мне"
   Enter current password: "Ведите текущий пароль"
+  Activites: "Астивности"
   menu:
     panels:
       lang: "Локализация"
@@ -219,6 +220,11 @@ ru:
       uk: "Українська"
     languages:
       lang: "Язык"
+      en: "English"
+      ru: "Русский"
+      uk: "Українська"
+    calendar:
+      lang: "Выберете язык календаря: "
       en: "English"
       ru: "Русский"
       uk: "Українська"

@@ -35,13 +35,19 @@
       .ibox.float-e-margins
         .ibox-title
           h5 = t('Task manager')
-          |
-          '
-          /select#lang-selector
-          .ibox-tools
-            a.collapse-link
+          /.pull-right
+            h5 = t('menu.calendar.lang')
+            '
+            select.select-control#lang-selector style="padding-left:20px"
+
+          .pull-right
+            h5 = t('menu.calendar.lang')
+            |
+            '
+            select.select-control#lang-selector
+            /a.collapse-link
               i.fa.fa-chevron-up
-            a.close-link
+            /a.close-link
               i.fa.fa-times
         .ibox-content
           #calendar
@@ -50,7 +56,7 @@
     .row
       .col-md-8
         #calendar
-javascript:
+/javascript:
   $("#calendar").fullCalendar({
     header: {
       left: 'prev,next today',
@@ -64,6 +70,3 @@ javascript:
     // events: "/dashboard/get_events",
     dragOpacity: "0.5"
   });
-
-
-

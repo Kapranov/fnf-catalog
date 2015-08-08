@@ -1,0 +1,19 @@
+#calendar {
+  max-width: auto;
+  margin: 0px auto;
+  padding: 0 10px;
+}
+
+.select-control {
+  margin: -10px -10px -10px 10px;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #E5E6E7;
+  border-radius: 1px;
+  border-color: #1AB394 !important;
+  color: inherit;
+  font-size: 14px;
+  padding: 6px 12px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}

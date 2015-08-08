@@ -79,7 +79,7 @@
               button[type="button" class="btn btn-default btn-sm btn-block"]
                 i.fa.fa-coffee
                 | Buy a coffee
-    .col-lg-8
+    .col-lg-4
       .widget-head-color-box.navy-bg.p-lg.text-center
         .m-b-md
           h2.font-bold.no-margins
@@ -104,10 +104,10 @@
             i.fa.fa-heart
             | Love
 
-    /.col-md-8
+    .col-md-4
       .ibox.float-e-margins
         .ibox-title
-          h5 Activites
+          h5 = t('Activites')
           .ibox-tools
             a.collapse-link
               i.fa.fa-chevron-up
@@ -116,6 +116,18 @@
         .ibox-content
           div
             .feed-activity-list
+              .feed-element
+                a[href="#" class="pull-left"]
+                  - @users.each do |user|
+                    = attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                .media-body
+                  small.pull-right.text-navy
+                  ul
+                  - @activities.each do |activity|
+                    li = link_to activity.trackable.name, activity.trackable
+                /- @activities.each do |activity|
+                  = link_to activity.owner.name, activity.owner if activity.owner
+                  = link_to activity.trackable.name, activity.trackable
               .feed-element
                 a[href="#" class="pull-left"]
                   img[alt="image" class="img-circle" src="a1.jpg"]

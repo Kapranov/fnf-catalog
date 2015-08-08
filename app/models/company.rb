@@ -10,4 +10,7 @@ class Company < ActiveRecord::Base
   accepts_attachments_for :attachments, attachment: :attach
 
   translates :name, :description, fallbacks_for_empty_translations: true
+
+  include PublicActivity::Model
+  tracked
 end

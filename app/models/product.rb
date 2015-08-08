@@ -19,6 +19,9 @@ class Product < ActiveRecord::Base
   monetize :price
   monetize :cost_price
 
+  include PublicActivity::Model
+  tracked
+
   default_scope { where(active: true) }
 
   # validates_associated :uploads

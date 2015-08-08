@@ -208,6 +208,7 @@ uk:
   Note: "Примітка"
   About: "Про мене"
   Enter current password: "Ведіть поточний пароль"
+  Activites: "Активності"
   menu:
     panels:
       lang: "Локалізація"
@@ -216,6 +217,11 @@ uk:
       uk: "Українська"
     languages:
       lang: "Мова"
+      en: "English"
+      ru: "Русский"
+      uk: "Українська"
+    calendar:
+      lang: "Виберіть мову календаря: "
       en: "English"
       ru: "Русский"
       uk: "Українська"

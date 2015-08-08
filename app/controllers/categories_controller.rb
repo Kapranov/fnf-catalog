@@ -8,6 +8,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
+    @activities = PublicActivity::Activity.order("created_at DESC").where(trackable_type: "Category", trackable_id: @category).all
   end
 
   def new

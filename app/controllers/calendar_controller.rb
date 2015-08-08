@@ -1,5 +1,5 @@
 class CalendarController < ApplicationController
-  layout 'dashboards', only: [:index]
+  layout 'calendar', only: [:index]
 
   def index
     @users = User.all
