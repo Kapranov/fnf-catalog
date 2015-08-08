@@ -2,10 +2,11 @@
   .col-lg-8
     h2 = t('Profile')
     ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'profiles', :action => 'index'}"] = t('Profile')
       li.active
         strong = t('Listing profiles')
     div[style="height:5px"]
-
 .wrapper.wrapper-content
   .row.animated.fadeInRight
     .col-md-4
@@ -118,8 +119,12 @@
             .feed-activity-list
               .feed-element
                 a[href="#" class="pull-left"]
-                  - @users.each do |user|
+                  /- @users.each do |user|
                     = attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                  - if current_user.avatar_id?
+                    = image_tag attachment_url(current_user, :avatar, :fill, 100, 100), class: 'img-circle img-thumbnail'
+                  - else
+                    = image_tag 'images.png', size: "120", class: "img-circle img-thumbnail"
                 .media-body
                   small.pull-right.text-navy
                   ul

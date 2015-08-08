@@ -1,0 +1,8 @@
+div
+  .calendar
+div
+  #create_event_dialog.dialog[style="display:none;"]
+  #event_desc_dialog.dialog[style="display:none;"]
+
+javascript:
+  $('.calendar').fullCalendar(full_calendar_options);

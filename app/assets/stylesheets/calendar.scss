@@ -1,3 +1,23 @@
+// require_tree .
+// require jquery-ui
+//= require fullcalendar_engine/application
+//= require_self
+
+#loading{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #dd0000;
+  font-weight:bold;
+  color: white;
+  margin: 5px;
+  padding: 3px;
+}
+
+span > div#loading {
+  position: fixed;
+}
+
 #calendar {
   max-width: auto;
   margin: 0px auto;
@@ -16,4 +36,13 @@
   padding: 6px 12px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+a.fc-event {
+  -webkit-transition: 0s;
+  transition: 0s;
 }

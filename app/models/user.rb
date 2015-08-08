@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :companies
   has_many :profiles
   has_many :calendar
+  has_many :events
+  has_many :event_series
 
   attachment :avatar
 

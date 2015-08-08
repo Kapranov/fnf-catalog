@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20) do
+ActiveRecord::Schema.define(version: 22) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -97,6 +97,32 @@ ActiveRecord::Schema.define(version: 20) do
   end
 
   add_index "dashboards", ["user_id"], name: "index_dashboards_on_user_id", unique: true
+
+  create_table "fullcalendar_engine_event_series", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "frequency",  default: 1
+    t.string   "period",     default: "monthly"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean  "all_day",    default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fullcalendar_engine_events", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean  "all_day",         default: false
+    t.text     "description"
+    t.integer  "event_series_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "fullcalendar_engine_events", ["event_series_id"], name: "index_fullcalendar_engine_events_on_event_series_id"
+  add_index "fullcalendar_engine_events", ["user_id"], name: "index_fullcalendar_engine_events_on_user_id", unique: true
 
   create_table "order_items", force: :cascade do |t|
     t.integer  "product_id"

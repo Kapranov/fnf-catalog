@@ -194,6 +194,7 @@ en:
   About: "About me"
   Enter current password: "Enter the current password"
   Activites: "Activites"
+  Create Event: "Create Event"
   menu:
     panels:
       lang: "Localization"

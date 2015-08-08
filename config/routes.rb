@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  mount FullcalendarEngine::Engine => "calendar"
+  # mount FullcalendarEngine::Engine => "/application"
+  # mount FullcalendarEngine::Engine => "/fullcalendar_engine"
+
   resources :companies
   resources :products
   resources :categories

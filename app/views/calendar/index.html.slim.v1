@@ -1,0 +1,75 @@
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-8
+    h2 = t('Calendar')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'calendar', :action => 'index'}"] = t('Calendar')
+      li.active
+        strong = t('Task manager')
+    div[style="height:5px"]
+.wrapper.wrapper-content
+  .row.animated.fadeInDown
+    /.col-lg-3
+      .ibox.float-e-margins
+        .ibox-title
+          h5 Draggable Events
+          .ibox-tools
+            a.collapse-link
+              i.fa.fa-chevron-up
+            a.close-link
+              i.fa.fa-times
+        .ibox-content
+          #external-events
+            p Drag a event and drop into callendar.
+            div[class='external-event navy-bg'] Go to shop and buy some products.
+            div[class='external-event navy-bg'] Check the new CI from Corporation.
+            div[class='external-event navy-bg'] Send documents to John.
+            div[class='external-event navy-bg'] Phone to Sandra.
+            div[class='external-event navy-bg'] Chat with Michael.
+            p.m-t
+              .icheckbox_squre-green.checked
+                input#drop-remove.i-checks[type="checkbox" checket="" style="position:absolute; opacity:0"]
+                label[for='drop-remove']
+                | remove after drop
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-title
+          h5 = t('Task manager')
+          /.pull-right
+            h5 = t('menu.calendar.lang')
+            '
+            select.select-control#lang-selector style="padding-left:20px"
+
+          /.pull-right
+            h5 = t('menu.calendar.lang')
+            |
+            '
+            select.select-control#lang-selector
+        .ibox-content
+          /#calendar
+          .calendar
+          div[id="create_event_dialog" class="dialog" style ="display:none;"]
+          div[id = "event_desc_dialog" class="dialog" style ="display:none;"]
+
+javascript:
+  $('.calendar').fullCalendar(full_calendar_options);
+
+/.wrapper.wrapper-content.animated.fadeInRight.ecommerce
+  .ibox-content.m-b-sm.border-bottom
+    .row
+      .col-md-8
+        #calendar
+/javascript:
+  $("#calendar").fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month agendaWeek agendaDay'
+    },
+    defaultView: "month",
+    height: 500,
+    slotMinutes: 15,
+    timeFormat: "h:mm t{ - h:mm t} ",
+    // events: "/dashboard/get_events",
+    dragOpacity: "0.5"
+  });
