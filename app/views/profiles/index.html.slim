@@ -92,9 +92,6 @@
           span 350 Following
           span 610 Followers
       .widget-text-box
-        - @activities.each do |activity|
-          = link_to activity.owner.name, activity.owner if activity.owner
-          = link_to activity.trackable.name, activity.trackable
         h4.media-heading Alex Smith
         p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         .text-right
@@ -133,31 +130,6 @@
                 /- @activities.each do |activity|
                   = link_to activity.owner.name, activity.owner if activity.owner
                   = link_to activity.trackable.name, activity.trackable
-              .feed-element
-                a[href="#" class="pull-left"]
-                  img[alt="image" class="img-circle" src="a1.jpg"]
-                .media-body
-                  small.pull-right.text-navy 1m ago
-                  strong Sandra Momot
-                  | started following
-                  strong Monica Smith
-                  br
-                  small.text-muted Today 4:21 pm - 12.06.2014
-                  .actions
-                    a.btn.btn-xs.btn-white
-                      i.fa.fa-thumbs-up Like
-                    a.btn.btn-xs.btn-danger
-                      i.fa.fa-heart
-                      | Love
-              .feed-element
-                a[href="#" class="pull-left"]
-                  img[alt="image" class="img-circle" src="profile.jpg"]
-                .media-body
-                  small.pull-right 5m ago
-                  strong Monica Smith
-                  | posted a new blog.
-                  br
-                  small.text-muted Today 5:60 pm - 12.06.2014
               .feed-element
                 a[href="#" class="pull-left"]
                   img[alt="image" class="img-circle" src="a2.jpg"]

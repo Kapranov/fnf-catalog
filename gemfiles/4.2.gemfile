@@ -30,7 +30,6 @@ gem 'rolify'
 gem 'activeuuid'
 gem 'money-rails'
 gem 'foreigner'
-gem 'ffaker'
 gem 'ruby-units'
 gem 'gettext_i18n_rails'
 gem 'public_activity'
@@ -61,13 +60,15 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem 'ffaker'
+  gem 'faker'
+  gem 'populator'
 end
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.2.1'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'

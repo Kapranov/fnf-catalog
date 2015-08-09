@@ -231,6 +231,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
+    populator (1.0.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -438,6 +439,7 @@ DEPENDENCIES
   mini_magick
   momentjs-rails
   money-rails
+  populator
   pry-rails
   pry-rescue
   public_activity
