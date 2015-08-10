@@ -1,0 +1,16 @@
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-4
+    h2 = t('Forum')
+  .col-lg-7
+    .pull-right[style="margin-top:10px"]
+      = link_to "<button class='btn btn-sm btn-success dim button-width' type='button'>#{t('New Thread')}</button>".html_safe, new_forum_thread_path
+    .pull-right[style="margin-right:20px;margin-top:13px"]
+      = search_form_for @q, html: { class: "form-inline" } do |f|
+        = f.search_field :subject_or_forum_posts_body_cont, placeholder: t('Search for something'), class: "form-control"
+  .col-lg-1
+
+.wrapper.wrapper-content.animated.fadeInRight.ecommerce
+  .ibox-content.m-b-sm.border-bottom
+    .row
+      .col-sm-12
+        = render @forum_threads

@@ -36,6 +36,13 @@ gem 'public_activity'
 gem 'jquery-ui-rails'
 gem 'momentjs-rails'
 gem 'fullcalendar_engine'
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.2'
+gem 'sucker_punch'
+gem 'html-pipeline'
+gem 'github-markdown'
+gem 'gemoji'
+gem 'sanitize'
+gem 'paranoia'
 # gem 'fullcalendar-rails'
 # gem 'enum_to_sym'
 # gem 'anjlab-widgets'
@@ -63,6 +70,7 @@ group :development do
   gem 'ffaker'
   gem 'faker'
   gem 'populator'
+  gem 'annotate'
 end
 
 group :development, :test do

@@ -19,29 +19,30 @@
             a.close-link
               i.fa.fa-times
         .ibox-content.profile-content
-          table
-            thead
-              tr
-                th
-                th
-                th
-            tbody
-            - @users.each do |user|
-              tr
-                td
-                  /= attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
-                  - if user.avatar_id.present?
-                    span
-                      = attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
-                  - else
-                    span
-                      = image_tag 'images.png', size: "30", class: "img-circle"
-                td
-                  div[style="width:10px"]
-                td
-                  /= link_to user.name, '#', id: "ProfileUserList", remote: true
-                  = link_to user.name, "hello", remote: true
-                  span#hello_target
+          .span3.achievements-wrapper
+            table.table-striped.table-hover.table-condensed.table-scrollable
+              thead
+                tr
+                  th
+                  th
+                  th
+              tbody
+              - @users.each do |user|
+                tr
+                  td
+                    /= attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                    - if user.avatar_id.present?
+                      span
+                        = attachment_image_tag(user, :avatar, :fill, 30, 30, class: 'img-circle')
+                    - else
+                      span
+                        = image_tag 'images.png', size: "30", class: "img-circle"
+                  td
+                    div[style="width:10px"]
+                  td
+                    /= link_to user.name, '#', id: "ProfileUserList", remote: true
+                    = link_to user.name, "hello", remote: true
+                    span#hello_target
         /.ibox-content.no-padding.border-left-right
           img[alt="image" class="img-responsive" src="profile_big.jpg"]
         /.ibox-content.profile-content
@@ -101,6 +102,12 @@
           a.btn.btn-xs.btn-primary
             i.fa.fa-heart
             | Love
+        /h1 Action Ajax
+        /div
+          = link_to "Push and will result Ajax", { :controller => "profiles", :action => "hello" }, :update => 'time_div', :remote => true
+        /div#time_div
+        div
+
 
     .col-md-4
       .ibox.float-e-margins
@@ -157,18 +164,3 @@
                     a.btn.btn-xs.btn-primary
                       i.fa.fa-pencil
                       | Message
-javascript:
-  $(document).ready(function(){
-    $('#ProfileUserList').click(function(e){
-      e.preventDefault();
-      $.ajax({
-        type: 'GET',
-        url: "profiles/index",
-        success: function(response){
-          console.log(response)
-            $('#ProfileUserList').html(response);
-        }
-
-      })
-    });
-  });

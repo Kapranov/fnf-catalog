@@ -1,0 +1,20 @@
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-4
+    h2 = t('Forum')
+  .col-lg-7
+    .pull-right[style="margin-top:10px"]
+      = link_to "<button class='btn btn-sm btn-success dim button-width' type='button'>#{t('Back')}</button>".html_safe, forum_threads_path
+  .col-lg-1
+.wrapper.wrapper-content.animated.fadeInRight.ecommerce
+  .ibox-content.m-b-sm.border-bottom
+    .row
+      .col-sm-12
+        h1 = @forum_thread.subject
+        p.text-muted
+          | Created by
+          = @forum_thread.user.name
+        = render @forum_thread.forum_posts
+
+        hr
+
+        = render partial: "forum_posts/form"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 22) do
+ActiveRecord::Schema.define(version: 26) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -97,6 +97,24 @@ ActiveRecord::Schema.define(version: 22) do
   end
 
   add_index "dashboards", ["user_id"], name: "index_dashboards_on_user_id", unique: true
+
+  create_table "forum_posts", force: :cascade do |t|
+    t.integer  "forum_thread_id"
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "forum_threads", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "subject"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+  end
+
+  add_index "forum_threads", ["deleted_at"], name: "index_forum_threads_on_deleted_at"
 
   create_table "fullcalendar_engine_event_series", force: :cascade do |t|
     t.integer  "user_id"
@@ -254,8 +272,10 @@ ActiveRecord::Schema.define(version: 22) do
     t.string   "avatar_id"
     t.text     "note"
     t.text     "about"
+    t.datetime "deleted_at"
   end
 
+  add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 

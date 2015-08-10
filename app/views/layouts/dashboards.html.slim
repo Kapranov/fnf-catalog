@@ -6,6 +6,7 @@ html
       = content_for?(:title) ? yield(:title) : 'Fnf Zettheme'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'FnF Zettheme'}"
     == stylesheet_link_tag "dashboards", :media => 'all'
+    == stylesheet_link_tag "profiles", :media => 'all'
     == javascript_include_tag 'dashboards'
     == javascript_include_tag 'cocoon'
     /== javascript_include_tag 'cocoon-limiter/cocoon_limiter.js'

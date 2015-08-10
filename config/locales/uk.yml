@@ -210,6 +210,10 @@ uk:
   Enter current password: "Ведіть поточний пароль"
   Activites: "Активності"
   Create Event: "Створити подію"
+  Forum: "Форум"
+  New Thread: "Створити запис"
+  Subject: "Тема"
+  Add a comment: "Додати коментар"
   menu:
     panels:
       lang: "Локалізація"

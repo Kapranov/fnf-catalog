@@ -195,6 +195,10 @@ en:
   Enter current password: "Enter the current password"
   Activites: "Activites"
   Create Event: "Create Event"
+  Forum: "Forum"
+  New Thread: "New Entry"
+  Subject: "Subject"
+  Add a comment: "Add a comment"
   menu:
     panels:
       lang: "Localization"

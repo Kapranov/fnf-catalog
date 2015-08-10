@@ -213,6 +213,10 @@ ru:
   Enter current password: "Ведите текущий пароль"
   Activites: "Астивности"
   Create Event: "Создать событие"
+  Forum: "Форум"
+  New Thread: "Создать запись"
+  Subject: "Тема"
+  Add a comment: "Добавить комментарий"
   menu:
     panels:
       lang: "Локализация"

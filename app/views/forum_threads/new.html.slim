@@ -1,0 +1,15 @@
+.row.wrapper.border-bottom.white-bg.page-heading2
+  .col-lg-7
+    h2 = t('New Thread')
+    ol.breadcrumb
+      li
+        a[href="#{url_for :controller => 'forum_threads', :action => 'index'}"] = t('Forum')
+      li.active
+        strong = t('New Thread')
+  .col-lg-4
+    .title-action
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Back')}</button>".html_safe, forum_threads_path
+      = link_to "<button class='btn btn-sm btn-success dim btn-outline button-width' type='button'>#{t('Show')}</button>".html_safe, @forum_thread
+  .col-lg-1
+
+== render 'form'

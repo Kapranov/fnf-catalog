@@ -42,10 +42,13 @@ nav.navbar-default.navbar-static-side[role="navigation"]
           span.nav-label = t('Calendar')
         /= link_to 'Calendar',
       li
-        a[href="/profile"]
+        a[href="#{url_for :controller => 'forum_threads', :action => 'index'}"]
           i.fa.fa-globe
           span.nav-label = t('Blog')
-        /= link_to 'Calendar',
+      li
+        a[href="#{url_for :controller => 'forum_threads', :action => 'index'}"]
+          i.fa.fa-houzz
+          span.nav-label = t('Forum')
       li
         a[href="#{url_for :controller => 'companies', :action => 'index'}"]
           i.fa.fa-ioxhost
