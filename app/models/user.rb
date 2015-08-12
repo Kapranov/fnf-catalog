@@ -29,7 +29,7 @@
 #
 
 class User < ActiveRecord::Base
-  # acts_as_paranoid
+  acts_as_paranoid
 
   has_many :categories
   has_many :dashboards
@@ -73,11 +73,11 @@ class User < ActiveRecord::Base
     end
   end
 
-#  def name
-#    if deleted_at?
-#      "Deleted User"
-#    else
-#      "#{first_name} #{last_name}"
-#    end
-#  end
+  def name
+    if deleted_at?
+      "Deleted User"
+    else
+      "#{email} #{name} #{avatar_id} #{note} #{about}"
+    end
+  end
 end
